@@ -1,0 +1,18 @@
+package com.project.Event.repositories;
+
+import com.project.Event.models.User;
+import java.util.List;
+import javax.persistence.*;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository 												
+public interface UserRepository extends CrudRepository<User,Long>{
+    User findByUsername(String username);
+    List<User> findAll();
+    
+    User findById(Long id);
+	
+   
+}
+
